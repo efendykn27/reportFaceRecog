@@ -5,44 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bgall">
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/splash"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Report \nFace Recognition"
-        android:textAlignment="center"
+        android:text="Laporan Tamu"
+        android:layout_marginLeft="40dp"
         android:textSize="25dp"
         android:fontFamily="sans-serif-black"
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:textStyle="bold"
         />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="35dp">
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:textSize="18dp"
-            android:layout_marginTop="10dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:background="@drawable/bg_etext"
-            android:textColorHighlight="@color/blue"
-            android:hint="Username"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/username_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="12dp"
+                android:textColorHighlight="@color/blue"
+                android:background="@color/white"
+                android:hint="Username"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_text_input_layout"
             app:passwordToggleEnabled="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:textSize="18dp"
-                android:paddingStart="12dp"
+                android:paddingStart="5dp"
                 android:paddingEnd="12dp"
                 android:inputType="textPassword"
                 android:textColorHighlight="@color/blue"
@@ -67,7 +75,8 @@
 
     </LinearLayout>
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/login"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:text="Login"
         android:layout_gravity="center"

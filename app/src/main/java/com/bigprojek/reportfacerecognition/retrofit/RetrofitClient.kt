@@ -4,6 +4,11 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.POST
+import com.google.gson.GsonBuilder
+
+import com.google.gson.Gson
 
 class RetrofitClient {
 
@@ -16,13 +21,18 @@ class RetrofitClient {
             .addInterceptor(interceptor)
             .build()
 
+        val gson = GsonBuilder()
+            .setLenient()
+            .create()
+
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.204.136/API/")
+            .baseUrl("http://192.168.1.6/api/")
             .client(client)
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
 
         return retrofit.create(API::class.java)
     }
+
 
 }

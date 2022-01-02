@@ -8,6 +8,7 @@ data class PostResponse (
     data class Data(
         val id : String?,
         val nama : String?,
+        val instansi : String?,
         val nohp : String?,
         val keperluan:String?,
         val tanggal: String?,

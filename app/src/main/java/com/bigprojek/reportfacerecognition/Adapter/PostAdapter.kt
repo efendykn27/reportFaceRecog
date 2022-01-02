@@ -25,7 +25,7 @@ class PostAdapter (
         holder.textNohp.text = data.nohp
         holder.textKeperluan.text = data.keperluan
         holder.textWaktu.text = data.waktu
-        holder.textMin.text = "-"
+        holder.textInst.text = data.instansi
     }
 
     override fun getItemCount()= tamu.size
@@ -35,7 +35,7 @@ class PostAdapter (
         val textNohp = view.findViewById<TextView>(R.id.tvNohp)
         val textKeperluan = view.findViewById<TextView>(R.id.tvKeperluan)
         val textWaktu = view.findViewById<TextView>(R.id.tvWaktu)
-        val textMin = view.findViewById<TextView>(R.id.min)
+        val textInst = view.findViewById<TextView>(R.id.tvInstansi)
 
     }
 

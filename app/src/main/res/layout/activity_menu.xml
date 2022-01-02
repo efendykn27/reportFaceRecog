@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".menuActivity"
-    android:background="@drawable/bgall">
+    android:background="@drawable/bgall"
+    android:layout_marginTop="-1dp">
     <ImageView
         android:id="@+id/back"
         android:layout_width="30dp"

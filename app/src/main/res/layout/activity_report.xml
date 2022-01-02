@@ -55,18 +55,36 @@
             android:textSize="20dp"
             android:textColor="@color/black"
             android:id="@+id/tgl"/>
+
     </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Tanggal"
+        android:id="@+id/tanggal"
+        android:textAllCaps="false"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"
+        />
 
-    <androidx.recyclerview.widget.RecyclerView
-
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:id="@+id/rvPost"
-        tools:listitem="@layout/item_post"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:id="@+id/refresh"
+        android:layout_margin="11dp"
 
-        />
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvPost"
+            tools:listitem="@layout/item_post"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+            />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 
 </LinearLayout>

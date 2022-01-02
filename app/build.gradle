@@ -17,6 +17,12 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures
+
+            {
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -56,6 +62,8 @@ dependencies {
     // define any required OkHttp artifacts without version
     implementation("com.squareup.okhttp3:okhttp")
     implementation("com.squareup.okhttp3:logging-interceptor")
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
 
 }
